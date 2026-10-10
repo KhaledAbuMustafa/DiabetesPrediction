@@ -13,11 +13,11 @@ Predicting the onset of diabetes from routine clinical measurements, with a focu
 
 The baseline looked acceptable by accuracy but **missed more than half of the diabetic patients**. The final model finds 69 % of them while keeping precision unchanged.
 
-![Confusion matrix](images/confusion_matrix.png)
+![Confusion matrix](confusion_matrix.png)
 
 ## Dataset
 
-Pima Indians Diabetes dataset: 768 female patients, 8 clinical features (e.g. glucose, BMI, blood pressure, number of pregnancies) and a binary outcome. The classes are imbalanced (500 without, 268 with diabetes).
+[Pima Indians Diabetes dataset](https://www.kaggle.com/datasets/hasibur013/diabetes-dataset) (via Kaggle): 768 female patients, 8 clinical features (e.g. glucose, BMI, blood pressure, number of pregnancies) and a binary outcome. The classes are imbalanced (500 without, 268 with diabetes).
 
 ## Approach
 
@@ -57,7 +57,7 @@ Dropping insulin and skin thickness made no meaningful difference. Since these a
 
 ## Feature importance
 
-![Feature importance](images/feature_importance.png)
+![Feature importance](feature_importance.png)
 
 The weights of the linear SVM are clinically plausible:
 
@@ -72,6 +72,10 @@ Small or negative weights (e.g. insulin, blood pressure) should **not** be read 
 - Small dataset (768 patients) from a specific population (female, Pima heritage), so results do not generalise directly.
 - Many imputed values, especially for insulin.
 - Not a medical device and not intended for clinical use.
+
+## License
+
+The code in this repository is released under the MIT License. The dataset is not covered by this license; see the dataset source above.
 
 ## Tech stack
 
